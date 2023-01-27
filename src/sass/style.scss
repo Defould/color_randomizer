@@ -1,0 +1,46 @@
+@import 'libs/_bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@600&display=swap');
+@import 'base/_var.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    font-family: 'Rubik', sans-serif;
+}
+
+.col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h2 {
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s all;
+    &:hover {
+        background: rgba($color: #000000, $alpha: 0.1);
+        cursor: pointer;
+    }
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    transition: 0.3s all;
+    &:hover {
+        background: rgba($color: #000000, $alpha: 0.1);
+    }
+}
