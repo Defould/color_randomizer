@@ -1,0 +1,39 @@
+.col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    &__hex {
+        padding: 10px;
+        border-radius: 10px;
+        transition: 0.3s all;
+        &:hover {
+            background: rgba($color: #000000, $alpha: 0.1);
+            cursor: pointer;
+        }
+    }
+}
+
+.lock {    
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 10px;    
+    transition: 0.3s all;
+    &:hover {
+        background: rgba($color: #000000, $alpha: 0.1);
+    }
+}
+
+.notification {
+    position: absolute;
+    top: 150px;
+    display: none;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s all;
+    background: rgba($color: #000000, $alpha: 0.1);
+    &__active {
+        display: block;
+    }
+}

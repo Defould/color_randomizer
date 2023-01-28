@@ -1,5 +1,14 @@
-const cols = document.querySelectorAll('.col');
+'use strict';
 
+const modalTrigger = document.querySelector('.info'),
+      modal = document.querySelector('.modal'),
+      modalClose = document.querySelector('.close'),
+      cols = document.querySelectorAll('.col'),
+      notifications = document.querySelectorAll('.noitification');
+
+
+
+//обновление цветов по пробелу
 document.addEventListener('keydown', (event) => {
     event.preventDefault();
     if(event.code.toLowerCase() === 'space') {
@@ -7,6 +16,7 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
+//блокировка цвета, копирование по клику
 document.addEventListener('click', event => {
     const type = event.target.dataset.type;
     if(type === 'lock') {
@@ -19,11 +29,11 @@ document.addEventListener('click', event => {
     }
 });
 
+//генератор цветов
 function setRandomColors(isInitial) {
     const colors = isInitial ? getColorsFromHash() : [];
     cols.forEach((col, index) => {
-        const isLocked = col.querySelector('i').classList.contains('fa-lock');
-        
+        const isLocked = col.querySelector('i').classList.contains('fa-lock');        
         const title = col.querySelector('h2');
         const btn = col.querySelector('button');
         
@@ -41,28 +51,31 @@ function setRandomColors(isInitial) {
         col.style.background = color;
         title.textContent = color;
 
-        setTextColor(title, btn, color);
+        setTextColor(title, btn, color, modalTrigger);
     });
 
     updateColorsHash(colors);
 }
 
-//функция определения оттенка и присвоения цвета кнопки и текста
-function setTextColor(text, btns, color) {
+//определение оттенка и присвоение цвета кнопок и текста
+function setTextColor(text, btns, color, info) {
     const luminance = chroma(color).luminance();
     text.style.color = luminance > 0.5 ? 'black' : 'white';
     btns.style.color = luminance > 0.5 ? 'black' : 'white';
+    info.style.color = luminance > 0.5 ? 'black' : 'white';
 }
 
-//функция копирования по клику
+//копирование кода по клику
 function copyToClick(text) {
     return navigator.clipboard.writeText(text);
 }
 
+//хеш цветов в url
 function updateColorsHash(colors = []) {
     document.location.hash = colors.map(color => color.toString().substring(1)).join('-');
 }
 
+//генерация цветов из хеша url
 function getColorsFromHash() {
     if(document.location.hash.length > 1) {
         return document.location.hash
@@ -75,3 +88,13 @@ function getColorsFromHash() {
 }
 
 setRandomColors(true);
+
+
+//модалка
+modalTrigger.addEventListener('click', () => {
+    modal.classList.toggle('modal__active');
+});
+
+modalClose.addEventListener('click', () => {
+    modal.classList.toggle('modal__active');
+});

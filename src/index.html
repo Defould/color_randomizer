@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,40 +10,60 @@
     <title>Color randomizer</title>
 </head>
 <body>
+    <button class="info"><i class="fa-sharp fa-solid fa-circle-info"></i></button>
+    <div class="modal modal__active">
+        <button class="close modal__close"><i class="fa-solid fa-xmark"></i></button>
+        <h1 class="modal__title">Color Randomizer</h1>
+        <h2 class="modal__subtitle">Как пользоваться</h2>
+        <p class="modal__text">
+            Здесь ты можешь генерировать рандомные цвета! <br>
+            Я не знаю зачем тебе это нужно, но надеюсь тебе понравится :) <br>
+            И так, чтоб сгенерировать новые цвета, просто нажми "Пробел".<br>
+            Если понравился какой-то цвет, просто нажми на иконку <i class="fa-solid fa-lock-open"></i>, этот цвет заблокируется и больше не будет меняться.<br>
+            Нажми на код цвета и он скопируется в буфер обмена.<br>
+            Так же, ты можешь скопировать ссылку, отправить ее другу/маме/бабушке/дизайнеру/кошке, и у них откроется твоя палитра.<br>
+            Если вдруг вылетело из головы как этим пользоваться, ты можешь снова открыть это меню, нажав иконку <i class="fa-sharp fa-solid fa-circle-info"></i> справа вверху.
+        </p>
+    </div>
     <div class="col">
-        <h2 data-type="copy"></h2>
-        <button data-type="lock">
-            <!-- <i class="fa-solid fa-lock"></i> -->
+        <div class="notification">Скопировано</div>
+        <h2 class="col__hex" data-type="copy"></h2>
+        <button class="lock" class="lock" data-type="lock">
             <i class="fa-solid fa-lock-open" data-type="lock"></i>
         </button>
     </div>
     <div class="col">
-        <h2 data-type="copy"></h2>
-        <button data-type="lock">
+        <div class="notification">Скопировано</div>
+        <h2 class="col__hex" data-type="copy"></h2>
+        <button class="lock" data-type="lock">
             <i class="fa-solid fa-lock-open" data-type="lock"></i>
         </button>
     </div>
     <div class="col">
-        <h2 data-type="copy"></h2>
-        <button data-type="lock">
+        <div class="notification">Скопировано</div>
+        <h2 class="col__hex" data-type="copy"></h2>
+        <button class="lock" data-type="lock">
             <i class="fa-solid fa-lock-open" data-type="lock"></i>
         </button>
     </div>
     <div class="col">
-        <h2 data-type="copy"></h2>
-        <button data-type="lock">
+        <div class="notification">Скопировано</div>
+        <h2 class="col__hex" data-type="copy"></h2>
+        <button class="lock" data-type="lock">
             <i class="fa-solid fa-lock-open" data-type="lock"></i>
         </button>
     </div>
     <div class="col">
-        <h2 data-type="copy"></h2>
-        <button data-type="lock">
+        <div class="notification">Скопировано</div>
+        <h2 class="col__hex" data-type="copy"></h2>
+        <button class="lock" data-type="lock">
             <i class="fa-solid fa-lock-open" data-type="lock"></i>
         </button>
     </div>
     <div class="col">
-        <h2 data-type="copy"></h2>
-        <button data-type="lock">
+        <div class="notification">Скопировано</div>
+        <h2 class="col__hex" data-type="copy"></h2>
+        <button class="lock" data-type="lock">
             <i class="fa-solid fa-lock-open" data-type="lock"></i>
         </button>
     </div>
