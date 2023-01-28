@@ -4,7 +4,7 @@ const modalTrigger = document.querySelector('.info'),
       modal = document.querySelector('.modal'),
       modalClose = document.querySelector('.close'),
       cols = document.querySelectorAll('.col'),
-      notifications = document.querySelectorAll('.noitification');
+      notification = document.querySelector('.notification');
 
 
 
@@ -16,6 +16,8 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
+
+
 //блокировка цвета, копирование по клику
 document.addEventListener('click', event => {
     const type = event.target.dataset.type;
@@ -26,6 +28,10 @@ document.addEventListener('click', event => {
     }
     if(type === 'copy') {
         copyToClick(event.target.textContent);
+        notification.classList.add('notification__active');
+        setTimeout(function() {
+            notification.classList.remove('notification__active');
+        }, 2000);
     }
 });
 
