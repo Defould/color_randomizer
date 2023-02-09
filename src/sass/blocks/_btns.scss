@@ -1,0 +1,17 @@
+.lock {    
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 10px;    
+    transition: 0.3s all;
+    &:hover {
+        background: rgba($color: #000000, $alpha: 0.1);
+    }
+}
+
+.info {
+    font-size: 2rem;
+}
+
+.refresh {
+    font-size: 2rem;
+}

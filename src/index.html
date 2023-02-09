@@ -10,7 +10,12 @@
     <title>Color randomizer</title>
 </head>
 <body>
-    <button class="info"><i class="fa-sharp fa-solid fa-circle-info"></i></button>
+    <div class="menu">
+        <button class="menu__item info"><i class="fa-sharp fa-solid fa-circle-info"></i></button>
+        <div class="menu__divider"></div>
+        <button class="menu__item refresh"><i class="fa-sharp fa-solid fa-rotate"></i></button>
+    </div>
+    
     <div class="notification">Скопировано</div>
     <div class="modal modal__active">
         <button class="close modal__close"><i class="fa-solid fa-xmark"></i></button>
@@ -19,11 +24,11 @@
         <p class="modal__text">
             Здесь ты можешь генерировать рандомные цвета! <br>
             Я не знаю зачем тебе это нужно, но надеюсь тебе понравится :) <br>
-            И так, чтоб сгенерировать новые цвета, просто нажми "Пробел".<br>
+            И так, чтоб сгенерировать новые цвета, просто нажми "Пробел", или иконку <i class="fa-sharp fa-solid fa-rotate"></i><br>            
             Если понравился какой-то цвет, просто нажми на иконку <i class="fa-solid fa-lock-open"></i>, этот цвет заблокируется и больше не будет меняться.<br>
             Нажми на код цвета и он скопируется в буфер обмена.<br>
             Так же, ты можешь скопировать ссылку, отправить ее другу/маме/бабушке/дизайнеру/кошке, и у них откроется твоя палитра.<br>
-            Если вдруг вылетело из головы как этим пользоваться, ты можешь снова открыть это меню, нажав иконку <i class="fa-sharp fa-solid fa-circle-info"></i> справа вверху.
+            Если вдруг вылетело из головы как этим пользоваться, ты можешь снова открыть это меню, нажав иконку <i class="fa-sharp fa-solid fa-circle-info"></i>.
         </p>
     </div>
     <div class="col">

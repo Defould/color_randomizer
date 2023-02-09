@@ -1,0 +1,48 @@
+@media (max-width: 991px) {
+    h2 {
+       font-size: 1rem;
+    }
+    .lock {    
+        font-size: 1rem;
+    }
+    .info {
+        font-size: 1.5rem;
+    }
+    .modal {
+        width: 90%;
+        min-height: 40%;
+        font-size: 12px;
+    }
+    .refresh {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 767px) {
+    h2 {
+       font-size: 0.9rem;
+    }
+    .col {
+        flex: none;
+        height: 50%;
+        width: calc(100% / 3);
+    }
+    .lock {    
+        font-size: 0.9rem;
+    }
+    .info {
+        font-size: 1.5rem;
+    }
+    .notification {
+        top: 20px;
+        font-size: 0.8rem;
+    }
+    .modal {
+        width: 90%;
+        min-height: 40%;
+        font-size: 12px;
+    }
+    .refresh {
+        font-size: 1.5rem;
+    }
+}

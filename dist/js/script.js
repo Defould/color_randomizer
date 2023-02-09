@@ -4,16 +4,22 @@ const modalTrigger = document.querySelector('.info'),
       modal = document.querySelector('.modal'),
       modalClose = document.querySelector('.close'),
       cols = document.querySelectorAll('.col'),
-      notification = document.querySelector('.notification');
+      notification = document.querySelector('.notification'),
+      refresh = document.querySelector('.refresh');
 
 
 
 //обновление цветов по пробелу
-document.addEventListener('keydown', (event) => {
-    event.preventDefault();
-    if(event.code.toLowerCase() === 'space') {
+document.addEventListener('keydown', e => {
+    e.preventDefault();
+    if(e.code.toLowerCase() === 'space') {
         setRandomColors();
     }
+});
+
+refresh.addEventListener('click', e => {
+    e.preventDefault();
+    setRandomColors();
 });
 
 
@@ -57,18 +63,17 @@ function setRandomColors(isInitial) {
         col.style.background = color;
         title.textContent = color;
 
-        setTextColor(title, btn, color, modalTrigger);
+        setTextColor(title, btn, color);
     });
 
     updateColorsHash(colors);
 }
 
 //определение оттенка и присвоение цвета кнопок и текста
-function setTextColor(text, btns, color, info) {
+function setTextColor(text, btns, color) {
     const luminance = chroma(color).luminance();
     text.style.color = luminance > 0.5 ? 'black' : 'white';
     btns.style.color = luminance > 0.5 ? 'black' : 'white';
-    info.style.color = luminance > 0.5 ? 'black' : 'white';
 }
 
 //копирование кода по клику
